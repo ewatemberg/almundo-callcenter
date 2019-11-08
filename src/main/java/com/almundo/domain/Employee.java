@@ -8,7 +8,6 @@ import com.almundo.domain.type.Type;
 /**
  * The employee domain
  * @author emilio.watemberg
- *
  */
 public class Employee implements Comparable<Employee> {
 	
@@ -27,6 +26,16 @@ public class Employee implements Comparable<Employee> {
 
 	public void setType(Type type) {
 		this.type = type;
+	}
+	
+	public void take(CallMocked call) {
+		LOGGER.info("Hello, how can i help you...");
+		try {
+			Thread.sleep(call.getTime() * 1000);
+		} catch (InterruptedException e) {
+			LOGGER.warn("We had a problem with the call, it was interrupted!");
+		}
+		LOGGER.info("Finish call.");
 	}
 
 	@Override
