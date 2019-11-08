@@ -27,7 +27,7 @@ class CallCenterApplicationTests {
 	@Test
 	void test20ConcurrentCalls() throws InterruptedException {
 		PriorityBlockingQueue<Employee> list = getMockListEmployees();
-		Dispatcher dispatcher = new Dispatcher(10,list);
+		Dispatcher dispatcher = new Dispatcher(20,list);
 		for(int i = 0; i<20; i++) {
 			dispatcher.dispatchCall(new CallMocked());
 		}		
