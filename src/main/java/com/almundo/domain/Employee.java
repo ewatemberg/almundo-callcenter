@@ -35,7 +35,6 @@ public class Employee implements Comparable<Employee> {
 		} catch (InterruptedException e) {
 			LOGGER.warn("We had a problem with the call, it was interrupted!");
 		}
-		LOGGER.info("Finish call.");
 	}
 
 	@Override

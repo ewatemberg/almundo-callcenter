@@ -19,7 +19,7 @@ import com.almundo.domain.Employee;
 public class Dispatcher {
 
 	private static Logger LOGGER = LoggerFactory.getLogger(Employee.class);
-	private static long ADDITIONAL_TIME_SEG = 10;
+	private static long ADDITIONAL_TIME_SEG = 8;
 
 	private ExecutorService executor;
 	private PriorityBlockingQueue<Employee> queue;
@@ -64,7 +64,7 @@ public class Dispatcher {
 	}
 
 	/**
-	 * 
+	 * An additional time is added for calls to end. If they do not end, they are interrupted
 	 */
 	public void shutdown() {
 		LOGGER.info("Init Shutdown");
